@@ -5,6 +5,7 @@ var app = express();
 var Users = require('./models/users.js');
 
 
+
 //Configure our app
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars')
@@ -28,7 +29,7 @@ app.post('/user/register', function (req, res){
   newUser.name = req.body.fl_name;
   newUser.save(function(err){
     if(err){
-      res.send('there was an error');
+      res.render('index', {errors: err});
     }else{
       res.redirect('/');
     }
