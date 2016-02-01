@@ -16,3 +16,7 @@ or if you prefer automatically
 if using a secret session, rmb to type sth like this in the bash console
 
     SESSION_SECRET='foo123' nodemon ./index.js
+
+if using mongoose.connect(process.env.MONGO_URL), rmb to type this into bash console
+
+    MONGO_URL='mongodb://localhost:27017/social-todo' SESSION_SECRET='foo123' nodemon ./index.js
