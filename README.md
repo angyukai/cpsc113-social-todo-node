@@ -11,3 +11,8 @@ You can run the server with
 or if you prefer automatically
 
     nodemon index.js
+    
+    
+if using a secret session, rmb to type sth like this in the bash console
+
+    SESSION_SECRET='foo123' nodemon ./index.js
